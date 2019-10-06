@@ -4,7 +4,7 @@ class HoursController < ApplicationController
   # GET /hours
   # GET /hours.json
   def index
-    @hours = Hour.all.where("(deleted = false or deleted is null) and user_id = #{current_user.id}")
+    @hours = Hour.all.where("(deleted = false or deleted is null) and user_id = #{current_user.id}").order(:date)
   end
 
   # GET /hours/1
@@ -43,9 +43,10 @@ class HoursController < ApplicationController
   # PATCH/PUT /hours/1
   # PATCH/PUT /hours/1.json
   def update
+    byebug
     respond_to do |format|
       if @hour.update(hour_params)
-        format.html { redirect_to @hour, notice: 'Hour was successfully updated.' }
+        format.html { redirect_to hours_url, notice: 'Hour was successfully updated.' }
         format.json { render :show, status: :ok, location: @hour }
       else
         format.html { render :edit }
