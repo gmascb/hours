@@ -43,7 +43,6 @@ class HoursController < ApplicationController
   # PATCH/PUT /hours/1
   # PATCH/PUT /hours/1.json
   def update
-    byebug
     respond_to do |format|
       if @hour.update(hour_params)
         format.html { redirect_to hours_url, notice: 'Hour was successfully updated.' }
