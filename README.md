@@ -41,7 +41,11 @@ sudo gem install nokogiri
 sudo apt-get install libmysqlclient-dev
 sudo gem install mysql2
 
+sudo gem install bundler
+
 bundle install
+
+rails s
 
 Documentation and Support
 -------------------------
