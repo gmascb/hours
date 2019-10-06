@@ -45,11 +45,13 @@ group :development do
   gem 'spring'
 end
 
-
+gem 'jquery-rails'
+gem 'bootstrap', '~> 4.3.1'
 gem 'devise'
 gem 'high_voltage'
 gem 'mysql2', '~> 0.3.18'
-gem 'therubyracer', :platform=>:ruby
+#gem 'therubyracer', :platform=>:ruby
+gem 'mini_racer', platforms: :ruby
 
 group :development do
   gem 'better_errors'
