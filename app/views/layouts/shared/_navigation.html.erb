@@ -7,7 +7,10 @@
   <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/hours">Quadro de horário</a>
+        <a class="nav-link" href="/hours">Times</a>
+      </li>
+      <li class="nav-item">
+        <%= link_to("Logout", destroy_user_session_path, method: :delete, class: "nav-link") %>
       </li>
     </ul>
   </div>

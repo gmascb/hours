@@ -7,8 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render partial: "layouts/shared/navigation" %>
-
+  <% if user_signed_in? %>
+    <%= render partial: "layouts/shared/navigation" %>
+  <% end %>
   <% if notice %>
     <p class="alert alert-success"><%= notice %></p>
   <% end %>
