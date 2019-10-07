@@ -18,10 +18,15 @@
     <div id="time"></div>
   </div>
   <br/>
+  
+  <div class="field">
+    <%= f.label :kind %><br>
+    <%= f.select :kind, options_for_select(["Entrada 1","Saída 1","Entrada 2","Saída 2"]), :style => "width: 18%;" , :class => "custom-select custom-select-sm" %>
+  </div>
 
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_field :description, :style => "width: 18%;", :placeholder => "Description", :class => "form-control" %>
   </div>
   <div class="actions">
     <%= f.submit %>
